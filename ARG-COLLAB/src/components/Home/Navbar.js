@@ -11,8 +11,8 @@ export default function Navbar() {
                     <input type="checkbox" id="checkbox_toggle" />
                     <label for="checkbox_toggle" class="hamburger">&#9776;</label>
                     <div class="menu">
-                        <li><a href="/">Login</a></li>
-                        <li><a href="/">Register</a></li>
+                        <li><a href="/login">Login</a></li>
+                        <li><a href="/register">Register</a></li>
                     </div>
 
                 </ul>

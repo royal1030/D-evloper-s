@@ -7,6 +7,7 @@ import Img2 from "../Images/internship.jpeg";
 import Img3 from "../Images/job.jpg";
 import Img4 from "../Images/openSource.jpg";
 import Basicinfo from "./Basicinfo.json"
+// import backgroundImage from "./Home/image/home5.jpg"
 // import Img5 from "../Images/openSource.jpg";
 
 // const info = Basicinfo;
@@ -14,7 +15,11 @@ const imagesArr = [Img0, Img1, Img2, Img3, Img4];
 const Main = () => {
   return (
     <>
-      <Grid container spacing={4}>
+    <Box sx={{
+      backgroundColor: "#DDF7F3",
+        py: 4,
+      }}>
+    <Grid container spacing={4}>
         {[...Array(5)].map((_, index) => (
           <Grid key={index} item xs={12} sm={6} md={4} lg={3}>
             <div className="p-2 m-2 w-full h-screen bg-[#c9cbbe] flex items-center justify-center">
@@ -23,6 +28,8 @@ const Main = () => {
           </Grid>
         ))}
       </Grid>
+    </Box>
+    
     </>
   );
 };

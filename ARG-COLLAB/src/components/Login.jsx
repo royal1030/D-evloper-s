@@ -3,6 +3,7 @@ import { useNavigate, Link } from "react-router-dom";
 import { signInWithEmailAndPassword } from "firebase/auth";
 import { auth } from "../firebase";
 import { useState } from "react";
+// import Navbar from "./Home/Navbar";
 import {
   MDBBtn,
   MDBContainer,
@@ -15,6 +16,7 @@ import {
   MDBCheckbox,
 } from "mdb-react-ui-kit";
 import ForgotPass from "./ForgotPass";
+import Navbar from "./Navbarmain";
 
 function Login() {
   const [err, setErr] = useState(false);
@@ -39,6 +41,8 @@ function Login() {
   };
 
   return (
+    <>
+    {/* <Navbar/> */}
     <form onSubmit={handleSubmit}>
       <MDBContainer fluid>
         <MDBRow className="d-flex justify-content-center align-items-center h-100">
@@ -90,6 +94,7 @@ function Login() {
         </MDBRow>
       </MDBContainer>
     </form>
+    </>
   );
 }
 

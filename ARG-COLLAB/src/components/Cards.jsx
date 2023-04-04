@@ -7,8 +7,11 @@ import Button from "@mui/material/Button";
 import Box from "@mui/material/Box";
 import Typography from "@mui/material/Typography";
 import { motion } from "framer-motion";
+import { useNavigate } from "react-router-dom";
+
 
 export default function Cards({ img, info }) {
+  const navigate = useNavigate();
   const [rotate, setrotate] = React.useState(false);
   const [isHovered, setIsHovered] = React.useState(false);
   console.log(img, "img");
@@ -17,9 +20,30 @@ export default function Cards({ img, info }) {
     setIsHovered(true);
   };
 
+
   const handleMouseLeave = () => {
     setIsHovered(false);
   };
+
+  const handleClick=(id)=>{
+    if(id===1){
+      navigate("/home/coding")
+    }
+    else if(id===2){
+      navigate("/home/internship")
+    }
+    else if(id===3){
+navigate("/home/academics");
+    }
+    else if(id===4){
+      navigate("/home/job");
+
+    }
+    else{
+      navigate("/home/opensource");
+        }
+  }
+  
 
   // console.log(`Img${ind}`);
   // console.log(arr[ind]);
@@ -85,8 +109,8 @@ export default function Cards({ img, info }) {
               </Typography>
             </CardContent>
             <CardActions>
-              <Button size="small">Share</Button>
-              <Button size="small">Learn More</Button>
+              {/* <Button size="small">Share</Button> */}
+              <Button size="small" onClick={()=>handleClick(info.id)} >Learn More</Button>
             </CardActions>
           </Card>
         )}
