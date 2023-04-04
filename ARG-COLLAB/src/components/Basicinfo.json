@@ -1,0 +1,22 @@
+[
+    {
+        "id" : 1,
+        "text":"This is to show you what academics is actually!!"
+    },
+    {
+        "id" : 2,
+        "text":"This is to show you what coding is actually!!"
+    },
+    {
+        "id" : 3,
+        "text":"This is to show you what internship is actually!!"
+    },
+    {
+        "id" : 4,
+        "text":"This is to show you what job is actually!!"
+    },
+    {
+        "id" : 5,
+        "text":"This is to show you what open source is actually!!"
+    }
+]

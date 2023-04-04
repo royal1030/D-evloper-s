@@ -7,11 +7,8 @@ import Button from "@mui/material/Button";
 import Box from "@mui/material/Box";
 import Typography from "@mui/material/Typography";
 import { motion } from "framer-motion";
-import Img0 from "../Images/acadmics.jpg";
 
-// import img from "../Images/smpleimg.jpg";
-
-export default function Cards({ img }) {
+export default function Cards({ img, info }) {
   const [rotate, setrotate] = React.useState(false);
   const [isHovered, setIsHovered] = React.useState(false);
   console.log(img, "img");
@@ -26,6 +23,7 @@ export default function Cards({ img }) {
 
   // console.log(`Img${ind}`);
   // console.log(arr[ind]);
+  console.log(info.text);
 
   return (
     <>
@@ -39,7 +37,7 @@ export default function Cards({ img }) {
           <Box sx={{ boxShadow: 10 }}>
             <motion.div
               animate={{ scale: 1, rotate: rotate ? 360 : 0 }}
-              transition={{ type: "tween", duration: 2.0 }}
+              transition={{ type: "tween", duration: 1.6 }}
               onClick={() => setrotate(!rotate)}
               // initial={{ scale: 0.7 }}
             >
@@ -77,14 +75,13 @@ export default function Cards({ img }) {
 
         {!isHovered ? null : (
           <Card sx={{ maxWidth: 345 }}>
-            <CardMedia component="img" sx={{ height: 140 }} src={`${img}`}/>
+            <CardMedia component="img" sx={{ height: 188 }} src={`${img}`} />
             <CardContent>
               <Typography gutterBottom variant="h5" component="div">
                 Lizard
               </Typography>
               <Typography variant="body2" color="text.secondary">
-                Lizards are a widespread group of squamate reptiles, with over
-                6,000 species, ranging across all continents except Antarctica
+                {info.text}
               </Typography>
             </CardContent>
             <CardActions>
