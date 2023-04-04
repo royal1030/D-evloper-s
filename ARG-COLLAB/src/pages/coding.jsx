@@ -86,31 +86,6 @@ const Coding = () => {
   // https://kontests.net/api/v1/all
 
   return (
-<<<<<<< HEAD
-    <>
-    <Box sx={{
-      backgroundColor: "#DDF7F3",
-        py:20,
-        // marginLeft: 50
-      }}>
-    <Grid container spacing={4}>
-        {[...Array(3)].map((_, index) => (
-          <Grid key={index} item xs={12} sm={6} md={4} lg={3}>
-            <div className="p-2 m-2 w-full h-screen bg-[#c9cbbe] flex items-center justify-center" style={{
-      // backgroundColor: "#DDF7F3",
-        // py:20,
-        marginLeft: "50px",
-        // backgroundColor: "red"
-      }}>
-              <Cards img={imagesArr[index]} info={Basicinfo[index]} />
-            </div>
-          </Grid>
-        ))}
-      </Grid>
-    </Box>
-      
-    </>
-=======
     <Grid container spacing={2} className="p-1">
       <Grid item xs={12} sm={4}>
         <Box>
