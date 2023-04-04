@@ -4,6 +4,7 @@ import { auth, db, storage } from "../firebase";
 import { ref, uploadBytesResumable, getDownloadURL } from "firebase/storage";
 import { doc, setDoc } from "firebase/firestore";
 import { useNavigate, Link } from "react-router-dom";
+import backgroundImage from "./Home/image/home5.jpg"
 import {
   MDBBtn,
   MDBContainer,
@@ -58,8 +59,8 @@ function Registration() {
 
   return (
     <form onSubmit={handleSubmit}>
-      <MDBContainer fluid>
-        <MDBCard className="text-black m-5" style={{ borderRadius: "25px" }}>
+      <MDBContainer fluid >
+        <MDBCard className="text-black m-5" style={{ borderRadius: "25px" , opacity: "0.8"}}>
           <MDBCardBody>
             <MDBRow>
               <MDBCol
@@ -105,7 +106,7 @@ function Registration() {
                 <div className="d-flex flex-row align-items-center mb-4">
                   <MDBIcon fas icon="key me-3" size="lg" />
                   <MDBInput
-                    label="Repeat your password"
+                    label="Confirm Password"
                     id="form4"
                     type="password"
                     name="cpassword"
