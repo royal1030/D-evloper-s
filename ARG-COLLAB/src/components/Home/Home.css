@@ -1,0 +1,294 @@
+.Home {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    margin-top: 50px;
+}
+
+.first-div {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    /* margin-bottom: 50px; */
+    margin-top: 50px;
+    width: 80%;
+}
+
+.home-heading-1 {
+    font-size: 28px;
+    font-weight: bold;
+    margin-right: 30px;
+}
+
+.que-mark {
+    font-size: 100px;
+    font-weight: bold;
+    color: #B1EDE8;
+    margin-left: 30px;
+}
+
+.Home-img1 {
+    width: 40%;
+}
+
+.second-div {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    margin-bottom: 50px;
+    width: 80%;
+}
+
+.home-heading-2 {
+    font-size: 24px;
+    font-weight: bold;
+    margin-left: 120px;
+    width: 80%;
+}
+
+.Home-img2 {
+    width: 40%;
+}
+
+.third-div {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+    margin-bottom: 50px;
+    width: 80%;
+}
+
+.login-register {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    margin-top: 20px;
+    width: 100%;
+}
+
+
+.button {
+    background-color: #B1EDE8;
+    color: #fff;
+    border: none;
+    padding: 10px 20px;
+    font-size: 18px;
+    font-weight: bold;
+    margin-right: 10px;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+
+.footer {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    background-color: #B1EDE8;
+    padding: 20px;
+}
+
+.homeFooter-para {
+    font-size: 18px;
+    font-weight: bold;
+    color: #fff;
+    margin-right: 10px;
+}
+
+.heart-giphy {
+    height: 30px;
+}
+
+.heading1-div {
+    width: 60%;
+    text-align: center;
+}
+
+.heading3-div {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.home-heading-3 {
+    font-size: 30px;
+    line-height: 40px;
+    text-align: center;
+    margin-bottom: 20px;
+    /* margin-left: 300px; */
+    margin-top: 50px;
+    /* margin-right: 30px; */
+    width: 50%
+}
+
+.Home-img3 {
+    width: 40%;
+    margin-top: 20px;
+    border-radius: 100%;
+}
+
+
+
+
+
+/* Styles for screens smaller than 600px */
+@media (max-width: 600px) {
+    .Home {
+        padding: 20px;
+    }
+
+    .first-div{
+        display: flex;
+        flex-direction: column;
+        margin-top: 20px;
+    }
+    .home-heading-1 {
+        font-size: 15px;
+        line-height: 25px;
+        width: 100%;
+    }
+
+    .que-mark {
+        font-size: 40px;
+        margin: 0;
+    }
+
+    .Home-img1 {
+        width: 80%;
+    }
+
+    .second-div{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: centers;
+    }
+    .home-heading-2 {
+        font-size: 15px;
+        line-height: 25px;
+        width: 100%;
+        margin-left: 15px;
+        /* margin-right: 50px; */
+    }
+
+    .Home-img2 {
+        width: 100%;
+    }
+    .third-div {
+        /* display: flex; */
+        /* flex-direction: column;
+        align-items: center;
+        justify-content: space-between;
+        margin-bottom: 50px;
+        width: 80%; */
+    }
+    .home-heading-3 {
+        font-size: 15px;
+        line-height: 25px;
+
+    }
+
+    .Home-img3 {
+        width: 100%;
+    }
+
+    .button {
+        font-size: 16px;
+        padding: 8px 16px;
+    }
+}
+
+@media (min-width: 601px) and (max-width: 675px) {
+    .Home-img1 {
+        width: 50%;
+    }
+    .Home-img2 {
+        width: 50%;
+    }
+    .home-heading-1 {
+        font-size: 18px;
+        line-height: 20px;
+    }
+
+    .home-heading-2 {
+        font-size: 18px;
+        line-height: 20px;
+        width: 90%;
+        margin-top: 50px;
+        margin-left: 45px;
+    }
+    .Home-img3 {
+        width: 70%;
+    }
+    .home-heading-3 {
+        /* font-size: 30px;
+        line-height: 40px;
+        text-align: center;
+        margin-bottom: 20px; */
+        /* margin-left: 300px; */
+        /* margin-top: 50px; */
+        /* margin-right: 30px; */
+        width: 80%
+    }
+}
+@media (min-width: 675px) and (max-width: 900px) {
+    .Home {
+        padding: 20px;
+    }
+
+    .home-heading-1 {
+        font-size: 20px;
+        line-height: 20px;
+    }
+
+    .que-mark {
+        font-size: 40px;
+    }
+
+    .Home-img1 {
+        width: 40%;
+    }
+
+    .home-heading-2 {
+        font-size: 19px;
+        line-height: 22px;
+        width: 90%;
+        margin-top: 50px;
+        margin-left: 45px;
+    }
+
+    .Home-img2 {
+        width: 50%;
+    }
+
+    .home-heading-3 {
+        font-size: 19px;
+        line-height: 22px;
+
+    }
+
+    .Home-img3 {
+        width: 60%;
+    }
+
+    .button {
+        font-size: 19px;
+        padding: 8px 16px;
+    }
+}
+
+@media (min-width: 901px) and (max-width: 1175px) {
+    .home-heading-2 {
+        font-size: 22px;
+        /* line-height: 25px; */
+        width: 80%;
+        margin-top: 100px;
+        margin-right: 50px;
+    }
+}
