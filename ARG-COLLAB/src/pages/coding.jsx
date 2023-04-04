@@ -1,17 +1,92 @@
-import React from "react";
-import Cards from "../components/Cards";
-import { Box, Grid } from "@mui/material";
-import Img0 from "../Images/acadmics.jpg";
-import Img1 from "../Images/coding.jpg";
-import Img2 from "../Images/internship.jpeg";
-import Img3 from "../Images/job.jpg";
-import Img4 from "../Images/openSource.jpg";
-import Basicinfo from "../components/Basicinfo.json";
+import React, { useState, useEffect } from "react";
+// import * as React from "react";
 
-// const info = Basicinfo;
-const imagesArr = [Img0, Img1, Img2, Img3, Img4];
-const Main = () => {
+// import { useState, useEffect } from "react";
+import { Box, Grid, Typography } from "@mui/material";
+
+const Coding = () => {
+  const [datas, setDatas] = useState([]);
+  const [codechefdata, setcodechefdata] = useState([]);
+  const [hackcon, sethackcon] = useState([]);
+  const [time, settime] = useState();
+
+  const getTime = (time) => {
+    // const startTimeSecond = time.startTimeSeconds;
+    const relativeTimeSecond = time.relativeTimeSeconds;
+
+    // Format the date as a string
+    // const startTimeString = startDate.toLocaleString(); // e.g. "1/2/2023, 3:30:55 PM"
+
+    // console.log(startTimeString);
+    const hoursLeft = relativeTimeSecond / -3600;
+    const hours = Math.floor(hoursLeft);
+    const minutes = Math.round((hoursLeft - hours) * 60);
+    return `${hours} hours ${minutes} minutes`;
+  };
+
+  const getutc = (utcTime) => {
+    const localTime = new Date(utcTime).toLocaleString();
+    console.log(localTime);
+
+    return `${localTime}`;
+  };
+
+  // https://kontests.net/api/v1/codeforces
+
+  useEffect(() => {
+    fetch("https://kontests.net/api/v1/codeforces")
+      .then((response) => response.json())
+      .then((data) => {
+        setDatas(data); // set the filtered contests in state
+        // console.log(filteredContests); // log the filtered contests
+      })
+      .catch((error) => console.error(error));
+  }, []);
+
+  // useEffect(() => {
+  //   fetch("https://codeforces.com/api/contest.list")
+  //     .then((response) => response.json())
+  //     .then((data) => {
+  //       const contests = data.result; // extract the array of contests from the API response
+  //       const filteredContests = contests.filter(
+  //         (contest) => contest.phase === "BEFORE"
+  //       ); // filter the contests by phase
+  //       setDatas(filteredContests); // set the filtered contests in state
+  //       console.log(filteredContests); // log the filtered contests
+  //     })
+  //     .catch((error) => console.error(error));
+  // }, []);
+
+  useEffect(() => {
+    console.log("run or not");
+    const API_URL = "https://kontests.net/api/v1/code_chef";
+    fetch(API_URL)
+      .then((response) => response.json())
+      .then((data) => {
+        // const contests = data["future_contests"]; // extract the array of present contests from the API response
+
+        // const contests = data.future_contests;
+        // console.log(contests, "contests");
+        // console.log(data, "data");
+        setcodechefdata(data);
+      })
+      .catch((error) => console.error(error));
+  }, []);
+
+  useEffect(() => {
+    fetch("https://kontests.net/api/v1/hacker_earth")
+      .then((response) => response.json())
+      .then((data) => {
+        sethackcon(data); // set the filtered contests in state
+        // console.log(hackcon); // log the filtered contests
+      })
+      .catch((error) => console.error(error));
+  }, []);
+
+  // https://kontests.net/api/v1/all
+
   return (
+<<<<<<< HEAD
     <>
     <Box sx={{
       backgroundColor: "#DDF7F3",
@@ -35,27 +110,117 @@ const Main = () => {
     </Box>
       
     </>
+=======
+    <Grid container spacing={2} className="p-1">
+      <Grid item xs={12} sm={4}>
+        <Box>
+          <Typography variant="h4" sx={{ backgroundColor: "blue" }}>
+            Codeforces Contests
+          </Typography>
+          <Typography variant="body1">
+            {datas.map((item) => (
+              <Grid key={item.id} item xs={28} sm={12}>
+                <Box>
+                  <a href={item.url} target="_blank" rel="noopener noreferrer">
+                    <Typography variant="h5">{item.name}</Typography>
+                  </a>
+                  <Typography
+                    variant="h8"
+                    // sx={{ color: "royalblue", fontSize: "24px" }}
+                    sx={{
+                      color: "royalblue",
+                      textShadow: "2px 2px 2px rgba(0, 0, 0, 0.3)",
+                      fontSize: "20px",
+                    }}
+                  >
+                    Contest Date :
+                  </Typography>
+                  <Typography variant="body1">
+                    {getutc(item.start_time)}
+                  </Typography>
+                </Box>
+              </Grid>
+            ))}
+          </Typography>
+        </Box>
+      </Grid>
+      <Grid item xs={12} sm={4}>
+        <Box>
+          <Typography variant="h3" sx={{ backgroundColor: "blue" }}>
+            Codechef Contests
+          </Typography>
+          <Typography variant="body1">
+            {codechefdata.map((item) => (
+              <Grid key={item.id} item xs={28} sm={12}>
+                <Box>
+                  <a href={item.url} target="_blank" rel="noopener noreferrer">
+                    <Typography variant="h5">{item.name}</Typography>
+                  </a>
+                  <Typography
+                    variant="h8"
+                    // sx={{ color: "royalblue", fontSize: "24px" }}
+                    sx={{
+                      color: "royalblue",
+                      textShadow: "2px 2px 2px rgba(0, 0, 0, 0.3)",
+                      fontSize: "20px",
+                    }}
+                  >
+                    Contest Date :
+                  </Typography>
+                  <Typography variant="body1"> {item.start_time}</Typography>
+                </Box>
+              </Grid>
+            ))}
+          </Typography>
+        </Box>
+      </Grid>
+      <Grid item xs={12} sm={4}>
+        <Box>
+          <Typography variant="h3" sx={{ backgroundColor: "blue" }}>
+            Atcoder Contests
+          </Typography>
+          <Typography variant="body1">
+            {hackcon.map((item) => (
+              <Grid key={item.id} item xs={28} sm={12}>
+                <Box>
+                  <a href={item.url} target="_blank" rel="noopener noreferrer">
+                    <Typography variant="h5">{item.name}</Typography>
+                  </a>
+                  <Typography
+                    variant="h8"
+                    // sx={{ color: "royalblue", fontSize: "24px" }}
+                    sx={{
+                      color: "royalblue",
+                      textShadow: "2px 2px 2px rgba(0, 0, 0, 0.3)",
+                      fontSize: "20px",
+                    }}
+                  >
+                    Contest Date :
+                  </Typography>
+
+                  <Typography variant="body1">
+                    {getutc(item.start_time)}
+                  </Typography>
+                  {/* <Typography variant="body1">
+                    Contest Date : {item.contest_start_date}
+                  </Typography> */}
+                </Box>
+              </Grid>
+            ))}
+          </Typography>
+        </Box>
+      </Grid>
+    </Grid>
+>>>>>>> 4ff27f34cfcede3eb4824829ec1cd8bace2f21d9
   );
 };
 
-export default Main;
+export default Coding;
 
-// import React from "react";
-// import { Grid } from "@mui/material";
-// import Cards from "./Cards";
+// const exactStartTime = (startTimeSeconds + relativeTimeSeconds) * 1000; // Convert to milliseconds
 
-// const GridComponent = () => {
-//   return (
-//     <Grid container spacing={4}>
-//       {[...Array(6)].map((_, index) => (
-//         <Grid key={index} item xs={12} sm={6} md={4} lg={3}>
-//           <div className="p-2 m-2 w-full h-screen bg-[#c9cbbe] flex items-center justify-center">
-//             <Cards />
-//           </div>
-//         </Grid>
-//       ))}
-//     </Grid>
-//   );
-// };
+// // Create a Date object from the exact start time
+// const startDate = new Date(exactStartTime);
 
-// export default GridComponent;
+// // Format the date as a string
+// const startTimeString = startDate.toLocaleString();
