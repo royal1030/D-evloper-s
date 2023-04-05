@@ -160,7 +160,7 @@ function App() {
           <Route path="home/internship" element={<Internship />} />
           <Route path="home/academics" element={<Academics />} />
           <Route path="home/job" element={<Job />} />
-          <Route path="home/opensource" element={<Opensource />} />
+          <Route path="home/Guide" element={<NotesLayout />} />
 {/* ======= */}
 {/* ======= */}
 
@@ -172,7 +172,7 @@ function App() {
 {/* <<<<<<< HEAD */}
 {/* <<<<<<< HEAD */}
 {/* >>>>>>> 4ff27f34cfcede3eb4824829ec1cd8bace2f21d9 */}
-<Route path="home/Guide" element={<NotesLayout />} />
+{/* <Route path="home/Guide" element={<NotesLayout />} /> */}
 {/* =======
 >>>>>>> 4ff27f34cfcede3eb4824829ec1cd8bace2f21d9
 >>>>>>> 82d9522b001f6affeaa2a3d65da25d482cdfb80b

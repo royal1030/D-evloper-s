@@ -40,7 +40,7 @@ navigate("/home/academics");
 
     }
     else{
-      navigate("/home/opensource");
+      navigate("/home/Guide");
         }
   }
   
@@ -59,12 +59,12 @@ navigate("/home/academics");
       >
         {isHovered ? null : (
           <Box sx={{ boxShadow: 10 }}>
-            <motion.div
+            {/* <motion.div
               animate={{ scale: 1, rotate: rotate ? 360 : 0 }}
               transition={{ type: "tween", duration: 1.6 }}
               onClick={() => setrotate(!rotate)}
               // initial={{ scale: 0.7 }}
-            >
+            > */}
               {/* <Card sx={{ maxWidth: 345 }}>
                 <CardMedia sx={{ height: 140 }} image={img} />
                 <CardContent>
@@ -83,7 +83,7 @@ navigate("/home/academics");
                 </CardActions>
               </Card> */}
               <Box sx={{ boxShadow: 3 }}>
-                <Card sx={{ maxWidth: 345 }}>
+                <Card sx={{ maxWidth: 700 }}>
                   <CardMedia
                     component="img"
                     height={345}
@@ -93,12 +93,12 @@ navigate("/home/academics");
                   />
                 </Card>
               </Box>
-            </motion.div>
+            {/* </motion.div> */}
           </Box>
         )}
 
         {!isHovered ? null : (
-          <Card sx={{ maxWidth: 345 }}>
+          <Card sx={{ maxWidth: 600 }}>
             <CardMedia component="img" sx={{ height: 188 }} src={`${img}`} />
             <CardContent>
               <Typography gutterBottom variant="h5" component="div">
