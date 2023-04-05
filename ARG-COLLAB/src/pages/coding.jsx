@@ -85,133 +85,159 @@ const Coding = () => {
 
   // https://kontests.net/api/v1/all
 
-  return (
-<<<<<<< HEAD
-    <>
-    <Box sx={{
-      backgroundColor: "#DDF7F3",
-        py:20,
-        // marginLeft: 50
-      }}>
-    <Grid container spacing={4}>
-        {[...Array(3)].map((_, index) => (
-          <Grid key={index} item xs={12} sm={6} md={4} lg={3}>
-            <div className="p-2 m-2 w-full h-screen bg-[#c9cbbe] flex items-center justify-center" style={{
-      // backgroundColor: "#DDF7F3",
-        // py:20,
-        marginLeft: "50px",
-        // backgroundColor: "red"
-      }}>
-              <Cards img={imagesArr[index]} info={Basicinfo[index]} />
-            </div>
-          </Grid>
-        ))}
-      </Grid>
-    </Box>
-      
-    </>
-=======
-    <Grid container spacing={2} className="p-1">
-      <Grid item xs={12} sm={4}>
-        <Box>
-          <Typography variant="h4" sx={{ backgroundColor: "blue" }}>
-            Codeforces Contests
-          </Typography>
-          <Typography variant="body1">
-            {datas.map((item) => (
-              <Grid key={item.id} item xs={28} sm={12}>
-                <Box>
-                  <a href={item.url} target="_blank" rel="noopener noreferrer">
-                    <Typography variant="h5">{item.name}</Typography>
-                  </a>
-                  <Typography
-                    variant="h8"
-                    // sx={{ color: "royalblue", fontSize: "24px" }}
-                    sx={{
-                      color: "royalblue",
-                      textShadow: "2px 2px 2px rgba(0, 0, 0, 0.3)",
-                      fontSize: "20px",
-                    }}
-                  >
-                    Contest Date :
-                  </Typography>
-                  <Typography variant="body1">
-                    {getutc(item.start_time)}
-                  </Typography>
-                </Box>
-              </Grid>
-            ))}
-          </Typography>
-        </Box>
-      </Grid>
-      <Grid item xs={12} sm={4}>
-        <Box>
-          <Typography variant="h3" sx={{ backgroundColor: "blue" }}>
-            Codechef Contests
-          </Typography>
-          <Typography variant="body1">
-            {codechefdata.map((item) => (
-              <Grid key={item.id} item xs={28} sm={12}>
-                <Box>
-                  <a href={item.url} target="_blank" rel="noopener noreferrer">
-                    <Typography variant="h5">{item.name}</Typography>
-                  </a>
-                  <Typography
-                    variant="h8"
-                    // sx={{ color: "royalblue", fontSize: "24px" }}
-                    sx={{
-                      color: "royalblue",
-                      textShadow: "2px 2px 2px rgba(0, 0, 0, 0.3)",
-                      fontSize: "20px",
-                    }}
-                  >
-                    Contest Date :
-                  </Typography>
-                  <Typography variant="body1"> {item.start_time}</Typography>
-                </Box>
-              </Grid>
-            ))}
-          </Typography>
-        </Box>
-      </Grid>
-      <Grid item xs={12} sm={4}>
-        <Box>
-          <Typography variant="h3" sx={{ backgroundColor: "blue" }}>
-            Atcoder Contests
-          </Typography>
-          <Typography variant="body1">
-            {hackcon.map((item) => (
-              <Grid key={item.id} item xs={28} sm={12}>
-                <Box>
-                  <a href={item.url} target="_blank" rel="noopener noreferrer">
-                    <Typography variant="h5">{item.name}</Typography>
-                  </a>
-                  <Typography
-                    variant="h8"
-                    // sx={{ color: "royalblue", fontSize: "24px" }}
-                    sx={{
-                      color: "royalblue",
-                      textShadow: "2px 2px 2px rgba(0, 0, 0, 0.3)",
-                      fontSize: "20px",
-                    }}
-                  >
-                    Contest Date :
-                  </Typography>
+  const HeadingStyle = {
+    backgroundColor: "#B1EDE8",
+    padding: "20px",
+    borderRadius: "10px",
+    display:"flex",
+    justifyContent:"center",
+    // width:"100%"
+    // alignItems:"center",
+    
+  }
+  const DivStyle = {
+    backgroundColor: "teal",
+    marginTop: "20px",
+    borderRadius: "10px",
+    padding: "10px",
+    // height: "30vh",
+    display:"flex",
+    flexDirection:"column",
+    justifyContent:"center",
+    alignItems:"center",
+    // lineHeight:"50px"
+  }
+  const head1Style = {
+    color: "black",
+    fontWeight: "bold",
+    fontSize:"28px",
+    cursor:"pointer"
+  }
+  const head2Style = {
+    color: "lightcoral",
+    textShadow: "2px 2px 2px rgba(0, 0, 0, 0.3)",
+    fontSize: "22px",
 
-                  <Typography variant="body1">
-                    {getutc(item.start_time)}
-                  </Typography>
-                  {/* <Typography variant="body1">
+  }
+  const head3Style = {
+    color: "coral",
+    textShadow: "2px 2px 2px rgba(0, 0, 0, 0.3)",
+    fontSize: "18px",
+
+  }
+  return (
+    <>
+      <Box sx={{
+       
+        backgroundColor: "#FFFCF9",
+        padding: "30px",
+        paddingRight:"80px",
+        // marginRight: "50px"
+
+      }}>
+<Box sx={{ display:"flex", justifyContent:"center", alignItem:"center"}}>
+<Typography variant="h3" >Contest Page</Typography>
+</Box>
+        
+        <Grid container spacing={2} className="p-1" sx={{ margin: "20px" }}>
+
+          <Grid item xs={12} sm={4}>
+            <Box>
+              <Box  sx={HeadingStyle}>
+              <Typography variant="h4"
+               >
+                CODEFORCES
+              </Typography>
+              </Box>
+              
+              <Typography variant="body1" sx={{
+                // backgroundColor:""
+              }}>
+                {datas.map((item) => (
+                  <Grid key={item.id} item xs={28} sm={12}>
+                    <Box sx={DivStyle}>
+                      <a href={item.url} target="_blank" rel="noopener noreferrer">
+                        <Typography variant="h5" sx={head1Style}>{item.name}</Typography>
+                      </a>
+                      <Typography
+                        variant="h8"
+                        // sx={{ color: "royalblue", fontSize: "24px" }}
+                        sx={head2Style}
+                      >
+                        Contest Date :
+                      </Typography>
+                      <Typography variant="body1"
+                        sx={head3Style}>
+                        {getutc(item.start_time)}
+                      </Typography>
+                    </Box>
+                  </Grid>
+                ))}
+              </Typography>
+            </Box>
+          </Grid>
+          <Grid item xs={12} sm={4}>
+            <Box>
+              <Typography variant="h4" sx={HeadingStyle}>
+                CODECHEF
+              </Typography>
+              <Typography variant="body1">
+                {codechefdata.map((item) => (
+                  <Grid key={item.id} item xs={28} sm={12}>
+                    <Box sx={DivStyle}>
+                      <a href={item.url} target="_blank" rel="noopener noreferrer">
+                        <Typography variant="h5" sx={head1Style}>{item.name}</Typography>
+                      </a>
+                      <Typography
+                        variant="h8"
+                        // sx={{ color: "royalblue", fontSize: "24px" }}
+                        sx={head2Style}
+                      >
+                        Contest Date :
+                      </Typography>
+                      <Typography variant="body1"  sx={head3Style}> {item.start_time}</Typography>
+                    </Box>
+                  </Grid>
+                ))}
+              </Typography>
+            </Box>
+          </Grid>
+          <Grid item xs={12} sm={4}>
+            <Box>
+              <Typography variant="h4" sx={HeadingStyle}>
+                ATCODER 
+              </Typography>
+              <Typography variant="body1">
+                {hackcon.map((item) => (
+                  <Grid key={item.id} item xs={28} sm={12}>
+                    <Box sx={DivStyle}>
+                      <a href={item.url} target="_blank" rel="noopener noreferrer">
+                        <Typography variant="h5" sx={head1Style}>{item.name}</Typography>
+                      </a>
+                      <Typography
+                        variant="h8"
+                        // sx={{ color: "royalblue", fontSize: "24px" }}
+                        sx={head2Style}
+                      >
+                        Contest Date :
+                      </Typography>
+
+                      <Typography variant="body1"  sx={head3Style}>
+                        {getutc(item.start_time)}
+                      </Typography>
+                      {/* <Typography variant="body1">
                     Contest Date : {item.contest_start_date}
                   </Typography> */}
-                </Box>
-              </Grid>
-            ))}
-          </Typography>
-        </Box>
-      </Grid>
-    </Grid>
->>>>>>> 4ff27f34cfcede3eb4824829ec1cd8bace2f21d9
+                    </Box>
+                  </Grid>
+                ))}
+              </Typography>
+            </Box>
+          </Grid>
+        </Grid>
+
+      </Box>
+    </>
   );
 };
 

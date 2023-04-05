@@ -2,30 +2,31 @@
 import "./App.css";
 import { Routes, Route, BrowserRouter, Navigate } from "react-router-dom";
 import Registration from "./components/Register";
-<<<<<<< HEAD
+// <<<<<<< HEAD
 import Coding from "./pages/coding";
-import Academics from "./pages/academics";
+// import Academics from "./pages/academics";
 import Job from "./pages/job";
 import Opensource from "./pages/opensource";
 import Internship from "./pages/internship"
 
-=======
-import Coding from "./pages/Coding";
->>>>>>> 4ff27f34cfcede3eb4824829ec1cd8bace2f21d9
+// =======
+// import Coding from "./pages/coding";
+// >>>>>>> 4ff27f34cfcede3eb4824829ec1cd8bace2f21d9
 import Login from "./components/Login";
 import "bootstrap/dist/css/bootstrap.css";
 // import { Home } from "@mui/icons-material";
 import Main from "./components/Main";
 import { AuthContext } from "./context/AuthContext";
 import { useContext } from "react";
-<<<<<<< HEAD
+// <<<<<<< HEAD
 import Navbarmain from "./components/Navbarmain";
-import HomePage from "./components/Home/homePage"
+// import HomePage from "./components/Home/homePage"
 import Home from "./components/Home/Home";
-=======
-import Navbar from "./components/Navbar";
-import Academics from "./pages/Academics";
->>>>>>> 4ff27f34cfcede3eb4824829ec1cd8bace2f21d9
+// =======
+// import Navbar from "./components/Navbar";
+import Academics from "./pages/academics";
+import NotesLayout from "./components/Guide/NotesLayout";
+// >>>>>>> 4ff27f34cfcede3eb4824829ec1cd8bace2f21d9
 
 function App() {
   const { currentUser } = useContext(AuthContext);
@@ -108,7 +109,7 @@ function App() {
           <Route path="login" element={<Login />} />
           <Route path="register" element={<Registration />} />
           <Route path="home/coding" element={<Coding />} />
-<<<<<<< HEAD
+          {/* <<<<<<< HEAD */}
           <Route path="home/internship" element={<Internship />} />
           <Route path="home/academics" element={<Academics />} />
           <Route path="home/job" element={<Job />} />
@@ -118,7 +119,8 @@ function App() {
           <Route path="home/Academics" element={<Academics />} />
           {/* <Route path="home/job" element={<Coding />} /> */}
           {/* <Route path="home/opensource" element={<Coding />} /> */}
->>>>>>> 4ff27f34cfcede3eb4824829ec1cd8bace2f21d9
+{/* >>>>>>> 4ff27f34cfcede3eb4824829ec1cd8bace2f21d9 */}
+<Route path="home/Guide" element={<NotesLayout />} />
         </Route>
       </Routes>
     </BrowserRouter>
