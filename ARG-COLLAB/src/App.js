@@ -22,7 +22,7 @@ import { AuthContext } from "./context/AuthContext";
 import { useContext } from "react";
 // <<<<<<< HEAD
 import Navbarmain from "./components/Navbarmain";
-// import HomePage from "./components/Home/homePage"
+import HomePage from "./components/Home/homePage"
 import Home from "./components/Home/Home";
 // =======
 // import Navbar from "./components/Navbar";
