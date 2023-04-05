@@ -1,3 +1,14 @@
+// <<<<<<< HEAD
+// import React from "react";
+
+// export default function Coding () {
+//      return (
+//         <>
+
+//         </>
+//      )
+// };
+// =======
 import React, { useState, useEffect } from "react";
 // import * as React from "react";
 
@@ -85,6 +96,7 @@ const Coding = () => {
 
   // https://kontests.net/api/v1/all
 
+// <<<<<<< HEAD
   const HeadingStyle = {
     backgroundColor: "#B1EDE8",
     padding: "20px",
@@ -117,6 +129,95 @@ const Coding = () => {
     color: "lightcoral",
     textShadow: "2px 2px 2px rgba(0, 0, 0, 0.3)",
     fontSize: "22px",
+// =======
+//   return (
+//     <Grid container spacing={2} className="p-1">
+//       <Grid item xs={12} sm={4}>
+//         <Box>
+//           <Typography variant="h4" sx={{ backgroundColor: "blue" }}>
+//             Codeforces Contests
+//           </Typography>
+//           <Typography variant="body1">
+//             {datas.map((item) => (
+//               <Grid key={item.id} item xs={28} sm={12}>
+//                 <Box>
+//                   <a href={item.url} target="_blank" rel="noopener noreferrer">
+//                     <Typography variant="h5">{item.name}</Typography>
+//                   </a>
+//                   <Typography
+//                     variant="h8"
+//                     // sx={{ color: "royalblue", fontSize: "24px" }}
+//                     sx={{
+//                       color: "royalblue",
+//                       textShadow: "2px 2px 2px rgba(0, 0, 0, 0.3)",
+//                       fontSize: "20px",
+//                     }}
+//                   >
+//                     Contest Date :
+//                   </Typography>
+//                   <Typography variant="body1">
+//                     {getutc(item.start_time)}
+//                   </Typography>
+//                 </Box>
+//               </Grid>
+//             ))}
+//           </Typography>
+//         </Box>
+//       </Grid>
+//       <Grid item xs={12} sm={4}>
+//         <Box>
+//           <Typography variant="h3" sx={{ backgroundColor: "blue" }}>
+//             Codechef Contests
+//           </Typography>
+//           <Typography variant="body1">
+//             {codechefdata.map((item) => (
+//               <Grid key={item.id} item xs={28} sm={12}>
+//                 <Box>
+//                   <a href={item.url} target="_blank" rel="noopener noreferrer">
+//                     <Typography variant="h5">{item.name}</Typography>
+//                   </a>
+//                   <Typography
+//                     variant="h8"
+//                     // sx={{ color: "royalblue", fontSize: "24px" }}
+//                     sx={{
+//                       color: "royalblue",
+//                       textShadow: "2px 2px 2px rgba(0, 0, 0, 0.3)",
+//                       fontSize: "20px",
+//                     }}
+//                   >
+//                     Contest Date :
+//                   </Typography>
+//                   <Typography variant="body1"> {item.start_time}</Typography>
+//                 </Box>
+//               </Grid>
+//             ))}
+//           </Typography>
+//         </Box>
+//       </Grid>
+//       <Grid item xs={12} sm={4}>
+//         <Box>
+//           <Typography variant="h3" sx={{ backgroundColor: "blue" }}>
+//             Atcoder Contests
+//           </Typography>
+//           <Typography variant="body1">
+//             {hackcon.map((item) => (
+//               <Grid key={item.id} item xs={28} sm={12}>
+//                 <Box>
+//                   <a href={item.url} target="_blank" rel="noopener noreferrer">
+//                     <Typography variant="h5">{item.name}</Typography>
+//                   </a>
+//                   <Typography
+//                     variant="h8"
+//                     // sx={{ color: "royalblue", fontSize: "24px" }}
+//                     sx={{
+//                       color: "royalblue",
+//                       textShadow: "2px 2px 2px rgba(0, 0, 0, 0.3)",
+//                       fontSize: "20px",
+//                     }}
+//                   >
+//                     Contest Date :
+//                   </Typography>
+// >>>>>>> ffd0d63252782945c113c0978662f3622a7e897b
 
   }
   const head3Style = {
@@ -243,10 +344,11 @@ const Coding = () => {
 
 export default Coding;
 
-// const exactStartTime = (startTimeSeconds + relativeTimeSeconds) * 1000; // Convert to milliseconds
+{/* // const exactStartTime = (startTimeSeconds + relativeTimeSeconds) * 1000; // Convert to milliseconds
 
 // // Create a Date object from the exact start time
 // const startDate = new Date(exactStartTime);
 
 // // Format the date as a string
 // const startTimeString = startDate.toLocaleString();
+>>>>>>> 82d9522b001f6affeaa2a3d65da25d482cdfb80b */}
