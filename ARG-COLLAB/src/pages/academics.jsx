@@ -1,4 +1,4 @@
-<<<<<<< HEAD
+// <<<<<<< HEAD
 import React from "react";
 
 export default function Academics () {
@@ -8,7 +8,7 @@ export default function Academics () {
         </>
      )
 };
-=======
+// =======
 // import React from "react";
 // import Cards from "../components/Cards";
 // import { Box, Grid } from "@mui/material";
@@ -92,4 +92,4 @@ export default function Academics () {
 //     </Card>
 //   );
 // }
->>>>>>> 82d9522b001f6affeaa2a3d65da25d482cdfb80b
+// >>>>>>> 82d9522b001f6affeaa2a3d65da25d482cdfb80b

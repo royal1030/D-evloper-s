@@ -329,6 +329,7 @@ const Coding = () => {
                       {/* <Typography variant="body1">
                     Contest Date : {item.contest_start_date}
                   </Typography> */}
+<<<<<<< HEAD
                     </Box>
                   </Grid>
                 ))}
@@ -339,6 +340,16 @@ const Coding = () => {
 
       </Box>
     </>
+=======
+                </Box>
+              </Grid>
+            ))}
+          </Typography>
+        </Box>
+      </Grid>
+    </Grid>
+// >>>>>>> 4ff27f34cfcede3eb4824829ec1cd8bace2f21d9
+>>>>>>> a7daa45f21fb209b39f9f9c2887144192bd95892
   );
 };
 
@@ -351,4 +362,8 @@ export default Coding;
 
 // // Format the date as a string
 // const startTimeString = startDate.toLocaleString();
+<<<<<<< HEAD
 >>>>>>> 82d9522b001f6affeaa2a3d65da25d482cdfb80b */}
+=======
+// >>>>>>> 82d9522b001f6affeaa2a3d65da25d482cdfb80b
+>>>>>>> a7daa45f21fb209b39f9f9c2887144192bd95892
