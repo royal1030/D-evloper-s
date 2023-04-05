@@ -116,12 +116,25 @@ const scrapedData = {
   data3
 };
 
-fs.writeFile('scraped-data.json', JSON.stringify(scrapedData), err => {
+// fs.writeFile('./databases/scraped-data.json', JSON.stringify(scrapedData), err => {
+//   if (err) {
+//     console.error(err);
+//     return;
+//   }
+//   console.log('Scraped data has been written to scraped-data.json');
+// });
+
+const path = require('path');
+const fileName = 'academicsData.json';
+const dataDir = "database"
+
+const filePath = path.join(__dirname, dataDir, fileName);
+fs.writeFile(filePath, JSON.stringify(scrapedData), err => {
   if (err) {
     console.error(err);
     return;
   }
-  console.log('Scraped data has been written to scraped-data.json');
+  console.log(`Scraped data has been written to ${filePath}`);
 });
 //   console.log(data1);
 //   console.log(data2);

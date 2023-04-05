@@ -9,7 +9,6 @@ import Typography from "@mui/material/Typography";
 import { motion } from "framer-motion";
 import { useNavigate } from "react-router-dom";
 
-
 export default function Cards({ img, info }) {
   const navigate = useNavigate();
   const [rotate, setrotate] = React.useState(false);
@@ -20,30 +19,23 @@ export default function Cards({ img, info }) {
     setIsHovered(true);
   };
 
-
   const handleMouseLeave = () => {
     setIsHovered(false);
   };
 
-  const handleClick=(id)=>{
-    if(id===1){
-      navigate("/home/coding")
-    }
-    else if(id===2){
-      navigate("/home/internship")
-    }
-    else if(id===3){
-navigate("/home/academics");
-    }
-    else if(id===4){
+  const handleClick = (id) => {
+    if (id === 1) {
+      navigate("/home/academics");
+    } else if (id === 2) {
+      navigate("/home/coding");
+    } else if (id === 3) {
+      navigate("/home/internship");
+    } else if (id === 4) {
       navigate("/home/job");
-
-    }
-    else{
+    } else {
       navigate("/home/Guide");
-        }
-  }
-  
+    }
+  };
 
   // console.log(`Img${ind}`);
   // console.log(arr[ind]);
@@ -65,7 +57,7 @@ navigate("/home/academics");
               onClick={() => setrotate(!rotate)}
               // initial={{ scale: 0.7 }}
             > */}
-              {/* <Card sx={{ maxWidth: 345 }}>
+            {/* <Card sx={{ maxWidth: 345 }}>
                 <CardMedia sx={{ height: 140 }} image={img} />
                 <CardContent>
                   <Typography gutterBottom variant="h5" component="div">
@@ -82,17 +74,17 @@ navigate("/home/academics");
                   <Button size="small">Learn More</Button>
                 </CardActions>
               </Card> */}
-              <Box sx={{ boxShadow: 3 }}>
-                <Card sx={{ maxWidth: 700 }}>
-                  <CardMedia
-                    component="img"
-                    height={345}
-                    // image={img}
-                    src={`${img}`}
-                    alt="Card image"
-                  />
-                </Card>
-              </Box>
+            <Box sx={{ boxShadow: 3 }}>
+              <Card sx={{ maxWidth: 700 }}>
+                <CardMedia
+                  component="img"
+                  height={345}
+                  // image={img}
+                  src={`${img}`}
+                  alt="Card image"
+                />
+              </Card>
+            </Box>
             {/* </motion.div> */}
           </Box>
         )}
@@ -102,7 +94,7 @@ navigate("/home/academics");
             <CardMedia component="img" sx={{ height: 188 }} src={`${img}`} />
             <CardContent>
               <Typography gutterBottom variant="h5" component="div">
-                Lizard
+                {info.title}
               </Typography>
               <Typography variant="body2" color="text.secondary">
                 {info.text}
@@ -110,7 +102,9 @@ navigate("/home/academics");
             </CardContent>
             <CardActions>
               {/* <Button size="small">Share</Button> */}
-              <Button size="small" onClick={()=>handleClick(info.id)} >Learn More</Button>
+              <Button size="small" onClick={() => handleClick(info.id)}>
+                Learn More
+              </Button>
             </CardActions>
           </Card>
         )}
