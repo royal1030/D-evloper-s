@@ -1,22 +1,22 @@
 [
     {
         "id" : 1,
-        "text":"This is to show you what academics is actually!!"
+        "text":"Academics helps the students in Career advancement, Personal development, Networking opportunities, Access to resources and Personal fulfillment!!"
     },
     {
         "id" : 2,
-        "text":"This is to show you what coding is actually!!"
+        "text":"Coding opens up the gate for new Career opportunities, enchances the Problem-solving skills. Its all about Creativity, Flexibility and Continuous learning!!"
     },
     {
         "id" : 3,
-        "text":"This is to show you what internship is actually!!"
+        "text":"Internship gives you Professional experience, helps the individual in Skill development, Resume building and Personal growth!!"
     },
     {
         "id" : 4,
-        "text":"This is to show you what job is actually!!"
+        "text":"Job gives an individual advantages like Financial stability, Social connections and many more Benefits and perks!!"
     },
     {
         "id" : 5,
-        "text":"This is to show you what open source is actually!!"
+        "text":"Contribution to the open source Enhance your skills, Build your portfolio, Access to high-quality code, Opportunities to lead!!"
     }
 ]
