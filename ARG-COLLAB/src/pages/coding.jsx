@@ -1,14 +1,14 @@
-<<<<<<< HEAD
-import React from "react";
+// <<<<<<< HEAD
+// import React from "react";
 
-export default function Coding () {
-     return (
-        <>
+// export default function Coding () {
+//      return (
+//         <>
 
-        </>
-     )
-};
-=======
+//         </>
+//      )
+// };
+// =======
 import React, { useState, useEffect } from "react";
 // import * as React from "react";
 
@@ -197,7 +197,7 @@ const Coding = () => {
         </Box>
       </Grid>
     </Grid>
->>>>>>> 4ff27f34cfcede3eb4824829ec1cd8bace2f21d9
+// >>>>>>> 4ff27f34cfcede3eb4824829ec1cd8bace2f21d9
   );
 };
 
@@ -210,4 +210,4 @@ export default Coding;
 
 // // Format the date as a string
 // const startTimeString = startDate.toLocaleString();
->>>>>>> 82d9522b001f6affeaa2a3d65da25d482cdfb80b
+// >>>>>>> 82d9522b001f6affeaa2a3d65da25d482cdfb80b
