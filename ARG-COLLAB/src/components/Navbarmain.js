@@ -1,13 +1,15 @@
 import React, { useContext } from "react";
 import { signOut } from "firebase/auth";
-import { auth } from "../firebase";
+// import { auth } from "../firebase";
+import { getAuth } from "firebase/auth";
+
 import { AuthContext } from "../context/AuthContext";
 import { UserContext } from "../context/UserContext";
 
 const Navbarmain = () => {
   const { currentUser } = useContext(AuthContext);
   const { dispatch } = useContext(UserContext);
-
+  const auth = getAuth();
   // const resetchatId =()=>{
   //   dispatch({ type: "RESET_USER"});
   // }
@@ -23,7 +25,8 @@ const Navbarmain = () => {
       <div className="user">
         {/* <img src={currentUser.photoURL} alt="" /> */}
         <span className="btn">{currentUser.displayName}</span>
-        <button className="button"
+        <button
+          className="button"
           onClick={() => {
             signOut(auth);
             aftersign();
