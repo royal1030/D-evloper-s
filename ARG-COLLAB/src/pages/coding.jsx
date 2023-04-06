@@ -108,7 +108,7 @@ const Coding = () => {
     
   }
   const DivStyle = {
-    backgroundColor: "teal",
+    // backgroundColor: "teal",
     marginTop: "20px",
     borderRadius: "10px",
     padding: "10px",
@@ -120,9 +120,9 @@ const Coding = () => {
     // lineHeight:"50px"
   }
   const head1Style = {
-    color: "black",
+    color: "#454545",
     fontWeight: "bold",
-    fontSize:"28px",
+    fontSize:"20px",
     cursor:"pointer"
   }
   const head2Style = {

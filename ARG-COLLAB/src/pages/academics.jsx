@@ -10,7 +10,7 @@ export default function Academics() {
   const { data1, data2, data3 } = datafetch;
 
   const HeadingStyle = {
-    backgroundColor: "#B1EDE8",
+    // backgroundColor: "#F7F1E5",
     padding: "20px",
     borderRadius: "10px",
     display: "flex",
@@ -19,10 +19,10 @@ export default function Academics() {
     // alignItems:"center",
   };
   const DivStyle = {
-    backgroundColor: "teal",
+    backgroundColor: "#B1EDE8",
     marginTop: "20px",
     borderRadius: "10px",
-    padding: "10px",
+    padding: "15px",
     // height: "30vh",
     display: "flex",
     flexDirection: "column",
@@ -31,9 +31,9 @@ export default function Academics() {
     // lineHeight:"50px"
   };
   const head1Style = {
-    color: "black",
-    fontWeight: "bold",
-    fontSize: "28px",
+    color: "#454545",
+    // fontWeight: "bold",
+    fontSize: "20px",
     cursor: "pointer",
   };
   const head2Style = {
