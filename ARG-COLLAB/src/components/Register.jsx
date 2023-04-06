@@ -6,6 +6,7 @@ import React, { useState } from "react";
 import { useNavigate, Link } from "react-router-dom";
 // import backgroundImage from "./Home/image/home5.jpg"
 import { getAuth, createUserWithEmailAndPassword } from "firebase/auth";
+import { updateProfile } from "firebase/auth";
 
 import {
   MDBBtn,
@@ -35,42 +36,44 @@ function Registration() {
     console.log(password, "password");
     console.log(cpassword, "cpass");
 
-    // try {
-    //   //Create user
-    //   const res = await createUserWithEmailAndPassword(auth, email, password);
+    try {
+      // Create user
+      const auth = getAuth();
 
-    //   //Update profile
-    //   await updateProfile(res.user, {
-    //     displayName,
-    //   });
+      const res = await createUserWithEmailAndPassword(auth, email, password);
 
-    //   //create user on firestore
-    //   // await setDoc(doc(db, "users", res.user.uid), {
-    //   //   uid: res.user.uid,
-    //   //   displayName,
-    //   //   email,
-    //   // });
-    // console.log("successfull");
-    // navigate("/login");
-    // } catch (err) {
-    //   console.log(err, "error");
-    // setErr(true);
-    // }
-    const auth = getAuth();
-    createUserWithEmailAndPassword(auth, email, password)
-      .then((userCredential) => {
-        // Signed in
-        const user = userCredential.user;
-        console.log("successfull");
-        navigate("/login");
-        // ...
-      })
-      .catch((error) => {
-        const errorCode = error.code;
-        const errorMessage = error.message;
-        setErr(true);
-        // ..
+      // //Update profile
+      await updateProfile(res.user, {
+        displayName,
       });
+
+      //   //create user on firestore
+      //   // await setDoc(doc(db, "users", res.user.uid), {
+      //   //   uid: res.user.uid,
+      //   //   displayName,
+      //   //   email,
+      //   // });
+      console.log("successfull");
+      navigate("/login");
+    } catch (err) {
+      console.log(err, "error");
+      setErr(true);
+    }
+    // const auth = getAuth();
+    // createUserWithEmailAndPassword(auth, email, password)
+    //   .then((userCredential) => {
+    //     // Signed in
+    //     const user = userCredential.user;
+    //     console.log("successfull");
+    //     navigate("/login");
+    //     // ...
+    //   })
+    //   .catch((error) => {
+    //     const errorCode = error.code;
+    //     const errorMessage = error.message;
+    //     setErr(true);
+    //     // ..
+    //   });
   };
 
   return (

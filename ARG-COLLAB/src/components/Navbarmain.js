@@ -24,7 +24,9 @@ const Navbarmain = () => {
       <span className="logo">ARG~Collab</span>
       <div className="user">
         {/* <img src={currentUser.photoURL} alt="" /> */}
-        <span className="btn">{currentUser.displayName}</span>
+        <span className="btn" style={{ color: "white" }}>
+          {currentUser.displayName} 
+        </span>
         <button
           className="button"
           onClick={() => {
