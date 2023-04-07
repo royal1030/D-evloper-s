@@ -1,13 +1,15 @@
 import React, { useContext } from "react";
 import { signOut } from "firebase/auth";
-import { auth } from "../firebase";
+// import { auth } from "../firebase";
+import { getAuth } from "firebase/auth";
+
 import { AuthContext } from "../context/AuthContext";
 import { UserContext } from "../context/UserContext";
 
-const Navbar = () => {
+const Navbarmain = () => {
   const { currentUser } = useContext(AuthContext);
   const { dispatch } = useContext(UserContext);
-
+  const auth = getAuth();
   // const resetchatId =()=>{
   //   dispatch({ type: "RESET_USER"});
   // }
@@ -19,11 +21,14 @@ const Navbar = () => {
 
   return (
     <div className="navbar">
-      <span className="logo">ARG Collab</span>
+      <span className="logo">ARG~Collab</span>
       <div className="user">
         {/* <img src={currentUser.photoURL} alt="" /> */}
-        <span>{currentUser.displayName}</span>
+        <span className="btn" style={{ color: "white" }}>
+          {currentUser.displayName} 
+        </span>
         <button
+          className="button"
           onClick={() => {
             signOut(auth);
             aftersign();
@@ -36,4 +41,4 @@ const Navbar = () => {
   );
 };
 
-export default Navbar;
+export default Navbarmain;

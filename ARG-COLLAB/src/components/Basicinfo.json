@@ -1,0 +1,27 @@
+[
+    {
+        "id" : 1,
+        "text":"Academics helps the students in Career advancement, Personal development, Networking opportunities, Access to resources and Personal fulfillment!!",
+        "title":"Academics"
+    },
+    {
+        "id" : 2,
+        "text":"Coding opens up the gate for new Career opportunities, enchances the Problem-solving skills. Its all about Creativity, Flexibility and Continuous learning!!",
+        "title":"Coding"
+    },
+    {
+        "id" : 3,
+        "text":"Internship gives you Professional experience, helps the individual in Skill development, Resume building and Personal growth!!",
+        "title":"Internship"
+    },
+    {
+        "id" : 4,
+        "text":"Job gives an individual advantages like Financial stability, Social connections and many more Benefits and perks!!",
+        "title":"Job"
+    },
+    {
+        "id" : 5,
+        "text":"Contribution to the open source Enhance your skills, Build your portfolio, Access to high-quality code, Opportunities to lead!!",
+        "title":"Open Source Details"
+    }
+]

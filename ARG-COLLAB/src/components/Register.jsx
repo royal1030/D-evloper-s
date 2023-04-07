@@ -1,9 +1,13 @@
 import React, { useState } from "react";
-import { createUserWithEmailAndPassword, updateProfile } from "firebase/auth";
-import { auth, db, storage } from "../firebase";
-import { ref, uploadBytesResumable, getDownloadURL } from "firebase/storage";
-import { doc, setDoc } from "firebase/firestore";
+// import { createUserWithEmailAndPassword, updateProfile } from "firebase/auth";
+// import { auth, db, storage } from "../firebase";
+// import { ref, uploadBytesResumable, getDownloadURL } from "firebase/storage";
+// import { doc, setDoc } from "firebase/firestore";
 import { useNavigate, Link } from "react-router-dom";
+// import backgroundImage from "./Home/image/home5.jpg"
+import { getAuth, createUserWithEmailAndPassword } from "firebase/auth";
+import { updateProfile } from "firebase/auth";
+
 import {
   MDBBtn,
   MDBContainer,
@@ -20,7 +24,6 @@ import {
 function Registration() {
   const [err, setErr] = useState(false);
   const navigate = useNavigate();
-
   const handleSubmit = async (e) => {
     e.preventDefault();
     const displayName = e.target[0].value;
@@ -34,32 +37,52 @@ function Registration() {
     console.log(cpassword, "cpass");
 
     try {
-      //Create user
+      // Create user
+      const auth = getAuth();
+
       const res = await createUserWithEmailAndPassword(auth, email, password);
 
-      //Update profile
+      // //Update profile
       await updateProfile(res.user, {
         displayName,
       });
 
-      //create user on firestore
-      // await setDoc(doc(db, "users", res.user.uid), {
-      //   uid: res.user.uid,
-      //   displayName,
-      //   email,
-      // });
+      //   //create user on firestore
+      //   // await setDoc(doc(db, "users", res.user.uid), {
+      //   //   uid: res.user.uid,
+      //   //   displayName,
+      //   //   email,
+      //   // });
       console.log("successfull");
       navigate("/login");
     } catch (err) {
       console.log(err, "error");
       setErr(true);
     }
+    // const auth = getAuth();
+    // createUserWithEmailAndPassword(auth, email, password)
+    //   .then((userCredential) => {
+    //     // Signed in
+    //     const user = userCredential.user;
+    //     console.log("successfull");
+    //     navigate("/login");
+    //     // ...
+    //   })
+    //   .catch((error) => {
+    //     const errorCode = error.code;
+    //     const errorMessage = error.message;
+    //     setErr(true);
+    //     // ..
+    //   });
   };
 
   return (
     <form onSubmit={handleSubmit}>
       <MDBContainer fluid>
-        <MDBCard className="text-black m-5" style={{ borderRadius: "25px" }}>
+        <MDBCard
+          className="text-black m-5"
+          style={{ borderRadius: "25px", opacity: "0.8" }}
+        >
           <MDBCardBody>
             <MDBRow>
               <MDBCol
@@ -105,7 +128,7 @@ function Registration() {
                 <div className="d-flex flex-row align-items-center mb-4">
                   <MDBIcon fas icon="key me-3" size="lg" />
                   <MDBInput
-                    label="Repeat your password"
+                    label="Confirm Password"
                     id="form4"
                     type="password"
                     name="cpassword"
